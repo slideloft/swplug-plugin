@@ -1,0 +1,5 @@
+{
+    "require": {
+        "zulucrypto/mobius-php": "^1.0"
+    }
+}
