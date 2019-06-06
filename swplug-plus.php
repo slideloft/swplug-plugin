@@ -44,9 +44,9 @@ function Register_Plugins_Links ($links, $file) {
  * The code that runs during plugin activation.
  * This action is documented in includes/class-stellar-activator.php
  */
-function activate_stellar() {
+function activate_swplug() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-stellar-activator.php';
-	Stellar_Activator::activate();
+	SWPlug_Activator::activate();
 }
 
 
@@ -55,13 +55,13 @@ function activate_stellar() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-stellar-deactivator.php
  */
-function deactivate_stellar() {
+function deactivate_swplug() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-stellar-deactivator.php';
-	Stellar_Deactivator::deactivate();
+	SWPlug_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_stellar' );
-register_deactivation_hook( __FILE__, 'deactivate_stellar' );
+register_activation_hook( __FILE__, 'activate_swplug' );
+register_deactivation_hook( __FILE__, 'deactivate_swplug' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -78,10 +78,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-stellar.php';
  *
  * @since    1.0.0
  */
-function run_stellar() {
+function run_swplug() {
 
-	$plugin = new Stellar();
+	$plugin = new SWPlug();
 	$plugin->run();
 
 }
-run_stellar();
+run_swplug();

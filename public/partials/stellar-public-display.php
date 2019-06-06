@@ -114,8 +114,8 @@
 
 
  <script src="https://stellarball.com/assets/js/jquery.qrcode.js"></script>
-<script src="https://stellarball.com/assets/js/qrcode.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/0.7.3/stellar-sdk.js"></script>
+ <script src="https://stellarball.com/assets/js/qrcode.js"></script> 
+ <?php wp_enqueue_script('stellar-sdk', plugin_dir_url(__FILE__).'/js/stellar-sdk.js', null, ''); ?>
 <script type="text/javascript">
     
   jQuery("#wallet_address_lbl").html('<?php echo $random_wallet_address; ?>');

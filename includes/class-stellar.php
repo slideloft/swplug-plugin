@@ -8,8 +8,8 @@
  * @link       http://www.stellar.com
  * @since      1.0.0
  *
- * @package    Stellar
- * @subpackage Stellar/includes
+ * @package    SWPlug
+ * @subpackage SWPlug/includes
  */
 
 /**
@@ -26,7 +26,7 @@
  * @subpackage swplug-plus/includes
  * @author     SWPLUG PLUS <medium.com/swplug>
  */
-class Stellar {
+class SWPlug {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -71,7 +71,7 @@ class Stellar {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'stellar';
+		$this->plugin_name = 'swplug';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -85,10 +85,10 @@ class Stellar {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Stellar_Loader. Orchestrates the hooks of the plugin.
-	 * - Stellar_i18n. Defines internationalization functionality.
-	 * - Stellar_Admin. Defines all hooks for the admin area.
-	 * - Stellar_Public. Defines all hooks for the public side of the site.
+	 * - SWPlug_Loader. Orchestrates the hooks of the plugin.
+	 * - SWPlug_i18n. Defines internationalization functionality.
+	 * - SWPlug_Admin. Defines all hooks for the admin area.
+	 * - SWPlug_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -121,14 +121,14 @@ class Stellar {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-stellar-public.php';
 
-		$this->loader = new Stellar_Loader();
+		$this->loader = new SWPlug_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Stellar_i18n class in order to set the domain and to register the hook
+	 * Uses the SWPlug_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -136,7 +136,7 @@ class Stellar {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Stellar_i18n();
+		$plugin_i18n = new SWPlug_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -151,7 +151,7 @@ class Stellar {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Stellar_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new SWPlug_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -177,7 +177,7 @@ class Stellar {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Stellar_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new SWPlug_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -213,7 +213,7 @@ class Stellar {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Stellar_Loader    Orchestrates the hooks of the plugin.
+	 * @return    SWPlug_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

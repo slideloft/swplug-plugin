@@ -20,7 +20,7 @@
  * @subpackage SWPLUG/public
  * @author     Ali <manknojiya121@gmail.com>
  */
-class Stellar_Public {
+class SWPlug_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -73,10 +73,10 @@ class Stellar_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Stellar_Loader as all of the hooks are defined
+		 * defined in SWPlug_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Stellar_Loader will then create the relationship
+		 * The SWPlug_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -96,10 +96,10 @@ class Stellar_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Stellar_Loader as all of the hooks are defined
+		 * defined in SWPlug_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Stellar_Loader will then create the relationship
+		 * The SWPlug_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
