@@ -24,7 +24,7 @@
  * @subpackage swplug-plus/includes
  * @author     SWPLUG PLUS <medium.com/swplug>
  */
-class Stellar_i18n {
+class SWPlug_i18n {
 
 
 	/**

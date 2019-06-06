@@ -19,7 +19,7 @@
  * @subpackage swplug-plus/includes
  * @author     SWPLUG PLUS <medium.com/swplug>
  */
-class Stellar_Deactivator {
+class SWPlug_Deactivator {
 
 	/**
 	 * Short Description. (use period)

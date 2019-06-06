@@ -21,7 +21,7 @@
  * @subpackage swplug-plus/includes
  * @author     SWPLUG PLUS <medium.com/swplug>
  */
-class Stellar_Loader {
+class SWPlug_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

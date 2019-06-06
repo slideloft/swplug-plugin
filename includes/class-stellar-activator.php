@@ -5,8 +5,8 @@
  * @link       https://medium.com/swplug
  * @since      1.0.0
  *
- * @package    Stellar
- * @subpackage Stellar/includes
+ * @package    SWPlug
+ * @subpackage SWPlug/includes
  */
 
 /**
@@ -19,7 +19,7 @@
  * @subpackage SWPLUG/includes
  * @author     SWPLUG PLUS <medium.com/swplug>
  */
-class Stellar_Activator {
+class SWPlug_Activator {
 
 	/**
 	 * Short Description. (use period)
