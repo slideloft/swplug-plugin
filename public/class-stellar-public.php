@@ -124,7 +124,7 @@ class SWPlug_Public {
 		$subject = 'Swplug Order Details';
 
 		$message = '<html><body>';
-		$message .= '<img src="https://swplug.com/store/wp-content/uploads/2018/02/icons8-puzzle-96.png" alt="SWPLUG" />';
+		$message .= 'SWPLUG';
 		$message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
 		
 		foreach ($_POST as $key => $value) {
